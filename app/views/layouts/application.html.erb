@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Merchant</title>
+    <title>Quirksmith - <%=controller.action_name %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,28 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+ <body>
+  <div class="wrapper">
+      <div class="header">
+        <h1>Quirksmith</h1>
+        <p>Online silver jewellery</p>
+      </div>
+
+      <p style="color: green"><%= flash[:notice] %></p>
+
+      <div class="sidebar">
+        (sidebar)
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="footer">
+        Quirksmith<br/>
+        Developed by - AGL
+      </div>
+  </div>
   </body>
+
 </html>
